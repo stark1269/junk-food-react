@@ -1,13 +1,21 @@
 {
   "files": {
-    "main.css": "/junk-food-react/static/css/main.7acaea2f.css",
-    "main.js": "/junk-food-react/static/js/main.07d3183d.js",
+    "main.css": "/junk-food-react/static/css/main.7cda0caf.css",
+    "main.js": "/junk-food-react/static/js/main.2cc8e434.js",
+    "static/js/795.0879e35a.chunk.js": "/junk-food-react/static/js/795.0879e35a.chunk.js",
+    "static/js/472.bf2c97bb.chunk.js": "/junk-food-react/static/js/472.bf2c97bb.chunk.js",
+    "static/js/796.b0f32e11.chunk.js": "/junk-food-react/static/js/796.b0f32e11.chunk.js",
+    "static/js/127.75c8ae42.chunk.js": "/junk-food-react/static/js/127.75c8ae42.chunk.js",
     "index.html": "/junk-food-react/index.html",
-    "main.7acaea2f.css.map": "/junk-food-react/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/junk-food-react/static/js/main.07d3183d.js.map"
+    "main.7cda0caf.css.map": "/junk-food-react/static/css/main.7cda0caf.css.map",
+    "main.2cc8e434.js.map": "/junk-food-react/static/js/main.2cc8e434.js.map",
+    "795.0879e35a.chunk.js.map": "/junk-food-react/static/js/795.0879e35a.chunk.js.map",
+    "472.bf2c97bb.chunk.js.map": "/junk-food-react/static/js/472.bf2c97bb.chunk.js.map",
+    "796.b0f32e11.chunk.js.map": "/junk-food-react/static/js/796.b0f32e11.chunk.js.map",
+    "127.75c8ae42.chunk.js.map": "/junk-food-react/static/js/127.75c8ae42.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.7cda0caf.css",
+    "static/js/main.2cc8e434.js"
   ]
 }
