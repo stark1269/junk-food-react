@@ -1,5 +1,5 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
-import { lazy, useState } from 'react';
+import { lazy, useState, Suspense } from 'react';
 import { Menu } from './Menu/Menu';
 import { restaurants } from 'api/api';
 
@@ -12,14 +12,16 @@ export const App = () => {
   const [menu] = useState(restaurants);
 
   return (
-    <Routes>
-      <Route path='/' element={<HomePage />} />
-      <Route path='/login' element={<LoginPage />} />
-      <Route path='/register' element={<RegisterPage />} />
-      <Route path='/rest' element={<MenuPage menu={menu} />}>
-        <Route path=':name' element={<Menu menu={menu} />} />
-      </Route>
-      <Route path='*' element={<Navigate to="/" />} />
-    </Routes>
+    <Suspense fallback={null}>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/login' element={<LoginPage />} />
+        <Route path='/register' element={<RegisterPage />} />
+        <Route path='/rest' element={<MenuPage menu={menu} />}>
+          <Route path=':name' element={<Menu menu={menu} />} />
+        </Route>
+        <Route path='*' element={<Navigate to="/" />} />
+      </Routes>
+    </Suspense>
   )
 };
