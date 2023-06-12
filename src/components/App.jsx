@@ -12,7 +12,7 @@ export const App = () => {
   const [menu] = useState(restaurants);
 
   return (
-    <Suspense>
+    <Suspense fallback={null}>
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/login' element={<LoginPage />} />
