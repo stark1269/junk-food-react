@@ -15,9 +15,9 @@ export const App = () => {
     <Suspense fallback={null}>
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/login' element={<LoginPage />} />
-        <Route path='/register' element={<RegisterPage />} />
-        <Route path='/rest' element={<MenuPage menu={menu} />}>
+        <Route path='login' element={<LoginPage />} />
+        <Route path='register' element={<RegisterPage />} />
+        <Route path='rest' element={<MenuPage menu={menu} />}>
           <Route path=':name' element={<Menu menu={menu} />} />
         </Route>
         <Route path='*' element={<Navigate to="/" />} />
