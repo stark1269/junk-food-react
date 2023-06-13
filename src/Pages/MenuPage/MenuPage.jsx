@@ -1,20 +1,21 @@
+import { UserMenu } from "components/UserMenu/UserMenu";
 import { Link, NavLink, Outlet } from "react-router-dom";
-import { Div } from "./MenuPage.styled";
 
-const MenuPage = ({menu}) => {
+const MenuPage = ({ menu, shopCart }) => {
 
   return (
-    <Div>
-      <Link to='/shop-cart'>Shop cart</Link>
+    <div>
+      {!shopCart.length ? <div>Shopping cart emply</div> : <Link to='/shop-cart'>Shop cart</Link>}
       <ul>
         {menu.map(item => {
-          return (<li key={item.id}>
+          return <li key={item.id}>
             <NavLink to={`/rest/${item.rest_name}`}>{item.rest_name}</NavLink>
-          </li>)
+          </li>
         })}
       </ul>
       <Outlet />
-    </Div>
+      <UserMenu/>
+    </div>
   )
 };
 

@@ -1,7 +1,7 @@
 const ShopCartPage = ({ shopCart }) => {
   return (
     <>
-      <h2>Shop Cart</h2>
+      <h2>Shopping Cart</h2>
       <ul>
         {shopCart.map(item => {
           return (

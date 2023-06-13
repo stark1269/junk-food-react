@@ -1,17 +1,19 @@
-import { NavLink } from "react-router-dom";
+import { selectIsLoggedIn } from "redux/selectors";
+import { useSelector } from 'react-redux';
+import { Div, Title, Text, Link, LinkWrap } from "./Home.styled";
 
 const HomePage = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+
   return (
-    <>
-      <h1>Welcome</h1>
-      <div>
-        <NavLink to='/login' >Login</NavLink>
-        <br />
-        <NavLink to='/register' >SingUp</NavLink>
-        <br />
-        <NavLink to='/rest' >Rest</NavLink>
-      </div>
-    </>
+    <Div>
+      <Title>Welcome to our Junk Food app.</Title>
+      <Text>Please log in or register to continue.</Text>
+      <LinkWrap>
+        {isLoggedIn ? <Link to='/rest'>Visit restaurants</Link> : <><Link to='/login' >Log in</Link>
+          <Link to='/register' >Sing up</Link></>}
+      </LinkWrap>
+    </Div>
   )
 };
 

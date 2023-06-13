@@ -1,16 +1,12 @@
+import { Div, Title } from "Pages/HomePage/Home.styled";
+import { Login } from "components/Login/Login";
+
 const LoginPage = () => {
   return (
-    <form>
-      <label>
-        Email
-        <input type="email" name="email" />
-      </label>
-      <label>
-        Password
-        <input type="password" name="password" />
-      </label>
-      <button type="submit">Log In</button>
-    </form>
+    <Div>
+      <Title>Log in</Title>
+      <Login />
+    </Div>
   )
 };
 
