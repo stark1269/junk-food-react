@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-export const Menu = ({ menu }) => {
+export const Menu = ({ menu, AddShopCart }) => {
   const { name } = useParams();
   const { foods } = menu.find(item => item.rest_name === name);
   
@@ -13,6 +13,7 @@ export const Menu = ({ menu }) => {
               <img src={item.picture} alt={item.name} width={200} />
               <h2>Name: {item.name}</h2>
               <p>Price: {item.price}$</p>
+              <button onClick={() => AddShopCart(item)}>Add to shop cart</button>
             </li>
           )
         })}

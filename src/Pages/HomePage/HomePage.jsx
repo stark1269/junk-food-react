@@ -2,7 +2,16 @@ import { NavLink } from "react-router-dom";
 
 const HomePage = () => {
   return (
-    <NavLink to='rest' >Go to rest</NavLink>
+    <>
+      <h1>Welcome</h1>
+      <div>
+        <NavLink to='/login' >Login</NavLink>
+        <br />
+        <NavLink to='/register' >SingUp</NavLink>
+        <br />
+        <NavLink to='/rest' >Rest</NavLink>
+      </div>
+    </>
   )
 };
 
