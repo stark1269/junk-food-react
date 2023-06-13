@@ -1,21 +1,26 @@
 {
   "files": {
     "main.css": "/junk-food-react/static/css/main.7cda0caf.css",
-    "main.js": "/junk-food-react/static/js/main.928774c4.js",
-    "static/js/795.dee69243.chunk.js": "/junk-food-react/static/js/795.dee69243.chunk.js",
-    "static/js/472.9fd7863f.chunk.js": "/junk-food-react/static/js/472.9fd7863f.chunk.js",
-    "static/js/796.a57d82d7.chunk.js": "/junk-food-react/static/js/796.a57d82d7.chunk.js",
-    "static/js/127.efca0593.chunk.js": "/junk-food-react/static/js/127.efca0593.chunk.js",
+    "main.js": "/junk-food-react/static/js/main.8d7912e0.js",
+    "static/js/82.478851d1.chunk.js": "/junk-food-react/static/js/82.478851d1.chunk.js",
+    "static/js/248.67528286.chunk.js": "/junk-food-react/static/js/248.67528286.chunk.js",
+    "static/js/857.e66bf7e8.chunk.js": "/junk-food-react/static/js/857.e66bf7e8.chunk.js",
+    "static/js/680.c481bdc7.chunk.js": "/junk-food-react/static/js/680.c481bdc7.chunk.js",
+    "static/js/705.5e8968ba.chunk.js": "/junk-food-react/static/js/705.5e8968ba.chunk.js",
+    "static/js/59.0c9f8cb9.chunk.js": "/junk-food-react/static/js/59.0c9f8cb9.chunk.js",
+    "static/media/FoodBG.jpeg": "/junk-food-react/static/media/FoodBG.6b013f5462448f34b126.jpeg",
     "index.html": "/junk-food-react/index.html",
     "main.7cda0caf.css.map": "/junk-food-react/static/css/main.7cda0caf.css.map",
-    "main.928774c4.js.map": "/junk-food-react/static/js/main.928774c4.js.map",
-    "795.dee69243.chunk.js.map": "/junk-food-react/static/js/795.dee69243.chunk.js.map",
-    "472.9fd7863f.chunk.js.map": "/junk-food-react/static/js/472.9fd7863f.chunk.js.map",
-    "796.a57d82d7.chunk.js.map": "/junk-food-react/static/js/796.a57d82d7.chunk.js.map",
-    "127.efca0593.chunk.js.map": "/junk-food-react/static/js/127.efca0593.chunk.js.map"
+    "main.8d7912e0.js.map": "/junk-food-react/static/js/main.8d7912e0.js.map",
+    "82.478851d1.chunk.js.map": "/junk-food-react/static/js/82.478851d1.chunk.js.map",
+    "248.67528286.chunk.js.map": "/junk-food-react/static/js/248.67528286.chunk.js.map",
+    "857.e66bf7e8.chunk.js.map": "/junk-food-react/static/js/857.e66bf7e8.chunk.js.map",
+    "680.c481bdc7.chunk.js.map": "/junk-food-react/static/js/680.c481bdc7.chunk.js.map",
+    "705.5e8968ba.chunk.js.map": "/junk-food-react/static/js/705.5e8968ba.chunk.js.map",
+    "59.0c9f8cb9.chunk.js.map": "/junk-food-react/static/js/59.0c9f8cb9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7cda0caf.css",
-    "static/js/main.928774c4.js"
+    "static/js/main.8d7912e0.js"
   ]
 }
