@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkjunk_food_react=self.webpackChunkjunk_food_react||[]).push([[472],{472:function(e,s,n){n.r(s);var a=n(184);s.default=function(){return(0,a.jsxs)("form",{children:[(0,a.jsxs)("label",{children:["Email",(0,a.jsx)("input",{type:"email",name:"email"})]}),(0,a.jsxs)("label",{children:["Password",(0,a.jsx)("input",{type:"password",name:"password"})]}),(0,a.jsx)("button",{type:"submit",children:"Log In"})]})}}}]);
+//# sourceMappingURL=472.9fd7863f.chunk.js.map

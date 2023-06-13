@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkjunk_food_react=self.webpackChunkjunk_food_react||[]).push([[472],{472:function(e,n,u){u.r(n);var c=u(184);n.default=function(){return(0,c.jsx)("div",{children:"LoginPage"})}}}]);
-//# sourceMappingURL=472.bf2c97bb.chunk.js.map

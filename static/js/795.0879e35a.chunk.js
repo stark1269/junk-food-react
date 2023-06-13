@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkjunk_food_react=self.webpackChunkjunk_food_react||[]).push([[795],{795:function(e,t,n){n.r(t);var r=n(87),u=n(184);t.default=function(){return(0,u.jsx)(r.OL,{to:"rest",children:"Go to rest"})}}}]);
-//# sourceMappingURL=795.0879e35a.chunk.js.map

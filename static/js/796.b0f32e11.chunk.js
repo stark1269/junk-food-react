@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkjunk_food_react=self.webpackChunkjunk_food_react||[]).push([[796],{796:function(e,n,u){u.r(n);var r=u(184);n.default=function(){return(0,r.jsx)("div",{children:"RegisterPage"})}}}]);
-//# sourceMappingURL=796.b0f32e11.chunk.js.map
