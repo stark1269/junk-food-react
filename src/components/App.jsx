@@ -1,18 +1,18 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { lazy, useState, Suspense, useEffect } from 'react';
 import { Menu } from './Menu/Menu';
-import restaurants from 'api/api.json';
-import ShopCartPage from 'Pages/ShopCartPage/ShopCartPage';
 import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { useDispatch, useSelector } from 'react-redux';import { selectIsRefreshing } from 'redux/selectors';
 import { refreshUser } from 'redux/operations';
 import { Layout } from './Layout/Layout';
+import restaurants from 'api/api.json';
 
 const HomePage = lazy(() => import('../Pages/HomePage/HomePage'));
 const LoginPage = lazy(() => import('../Pages/LoginPage/LoginPage'));
 const RegisterPage = lazy(() => import('../Pages/RegisterPage/RegisterPage'));
 const MenuPage = lazy(() => import('../Pages/MenuPage/MenuPage'));
+const ShopCartPage = lazy(() => import('Pages/ShopCartPage/ShopCartPage'));
 
 export const App = () => {
   const dispatch = useDispatch();
