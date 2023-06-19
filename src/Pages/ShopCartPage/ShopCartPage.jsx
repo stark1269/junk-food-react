@@ -1,10 +1,10 @@
 import { ShopCart } from 'components/ShopCart/ShopCart';
 import { Navigate } from 'react-router-dom';
 
-const ShopCartPage = ({ shopCart, DeleteShopCart }) => {
+const ShopCartPage = ({ shopCart, DeleteShopCart, updateCart }) => {
   return !shopCart.length ? <Navigate to='/rest' /> : <>
     <h2>Shopping Cart</h2>
-    <ShopCart shopCart={shopCart} DeleteShopCart={DeleteShopCart} />
+    <ShopCart shopCart={shopCart} DeleteShopCart={DeleteShopCart} updateCart={updateCart} />
   </>
 };
 

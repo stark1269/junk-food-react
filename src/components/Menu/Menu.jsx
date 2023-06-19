@@ -15,7 +15,7 @@ export const Menu = ({ menu, AddShopCart }) => {
               <img src={item.picture} alt={item.name} width={200} />
               <h2>{item.name}</h2>
               <p>Price: {item.price}$</p>
-              <button onClick={() => AddShopCart(item)}><TbShoppingCartPlus/></button>
+              <button onClick={() => AddShopCart(item, item.id)}><TbShoppingCartPlus /></button>
             </Item>
           )
         })}

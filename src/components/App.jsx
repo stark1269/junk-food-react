@@ -1,7 +1,7 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { lazy, useState, Suspense, useEffect } from 'react';
 import { Menu } from './Menu/Menu';
-import { restaurants } from 'api/api';
+import restaurants from 'api/api.json';
 import ShopCartPage from 'Pages/ShopCartPage/ShopCartPage';
 import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
@@ -24,12 +24,36 @@ export const App = () => {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  const AddShopCart = (item) => {
-    setShopCart(state => [...state, item])
+  const AddShopCart = (item, id) => {
+    const repeatDish = shopCart.find(cartItem => cartItem.id === id);
+
+    if (repeatDish) {
+      const updatedCart = shopCart.map(cartItem => {
+        if (cartItem.id === id) {
+          return { ...cartItem, quantity: cartItem.quantity + 1 };
+        }
+        return cartItem;
+      });
+
+      setShopCart(updatedCart);
+    } else {
+      setShopCart([...shopCart, item]);
+    }
   };
 
   const DeleteShopCart = (id) => {
-    setShopCart(shopCart.filter(item => item.id !== id))
+    setShopCart(shopCart.filter(cartItem => cartItem.id !== id))
+  };
+
+  const updateCart = (id, type) => {
+    const updatedCart = shopCart.map(cartItem => {
+      if (cartItem.id === id) {
+        return { ...cartItem, quantity: cartItem.quantity + type };
+      }
+      return cartItem;
+    });
+
+    setShopCart(updatedCart);
   };
 
   return isRefreshing ? (
@@ -41,7 +65,7 @@ export const App = () => {
           <Route path="/rest" element={<PrivateRoute redirectTo="/" component={<MenuPage menu={menu} />} />} >
             <Route path='/rest/:name' element={<Menu menu={menu} AddShopCart={AddShopCart} />} />
           </Route>
-          <Route path="/shop-cart" element={<PrivateRoute redirectTo="/" component={<ShopCartPage shopCart={shopCart} DeleteShopCart={DeleteShopCart} />} />} />
+          <Route path="/shop-cart" element={<PrivateRoute redirectTo="/" component={<ShopCartPage shopCart={shopCart} DeleteShopCart={DeleteShopCart} updateCart={updateCart} />} />} />
         </Route>
         <Route path='/' element={<HomePage />} />
         <Route path="/login" element={<PublicRoute redirectTo="/rest" component={<LoginPage />} />} />
