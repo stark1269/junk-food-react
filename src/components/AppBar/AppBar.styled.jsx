@@ -31,6 +31,6 @@ export const LinkIcon = styled(NavLink)`
   align-items: center;
   font-size: 46px;
   font-family: 'Josefin Sans';
-  color: ${p => p.shopCartLength ? "#2b7b0c" : "#aa2121"};
+  color: ${p => p.length ? "#2b7b0c" : "#aa2121"};
 `;
 

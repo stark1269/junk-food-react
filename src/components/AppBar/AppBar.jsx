@@ -8,8 +8,8 @@ export const AppBar = ({ shopCart }) => {
       <Wrapp>
         <Link to='/rest'>Restaurants</Link>
         {!shopCart.length ?
-          <LinkIcon shopCartLength={shopCart.length} to='/rest'><TbShoppingCartOff /></LinkIcon> :
-          <LinkIcon shopCartLength={shopCart.length} to='/shop-cart'><TbShoppingCartPlus /></LinkIcon>}
+          <LinkIcon length={shopCart.length} to='/rest'><TbShoppingCartOff /></LinkIcon> :
+          <LinkIcon length={shopCart.length} to='/shop-cart'><TbShoppingCartPlus /></LinkIcon>}
       </Wrapp>
       <UserMenu />
     </Header>
