@@ -1,4 +1,6 @@
 import { useParams } from "react-router-dom";
+import { Item, List } from "./Menu.styled";
+import { TbShoppingCartPlus } from 'react-icons/tb';
 
 export const Menu = ({ menu, AddShopCart }) => {
   const { name } = useParams();
@@ -6,18 +8,18 @@ export const Menu = ({ menu, AddShopCart }) => {
   
   return (
     <>
-      <ul>
+      <List>
         {foods.map(item => {
           return (
-            <li key={item.id}>
+            <Item key={item.id}>
               <img src={item.picture} alt={item.name} width={200} />
-              <h2>Name: {item.name}</h2>
+              <h2>{item.name}</h2>
               <p>Price: {item.price}$</p>
-              <button onClick={() => AddShopCart(item)}>Add to shop cart</button>
-            </li>
+              <button onClick={() => AddShopCart(item)}><TbShoppingCartPlus/></button>
+            </Item>
           )
         })}
-      </ul>
+      </List>
     </>
   )
 };

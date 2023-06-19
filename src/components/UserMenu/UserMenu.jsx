@@ -1,17 +1,18 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { logOut } from 'redux/operations';
 import { selectUser } from 'redux/selectors';
+import { Wrapp, Text, Btn } from './UserMenu.styled';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
 
   return (
-    <div>
-      <p>Welcome, {user.name}</p>
-      <button type="button" onClick={() => dispatch(logOut())}>
+    <Wrapp>
+      <Text>Welcome, {user.name}</Text>
+      <Btn type="button" onClick={() => dispatch(logOut())}>
         Logout
-      </button>
-    </div>
-  );
+      </Btn>
+    </Wrapp>
+  )
 };

@@ -28,7 +28,7 @@ export const Span = styled.span`
   &::after {
     content: '*';
     position: absolute;
-    color: #a81212;
+    color: #aa2121;
   }
 `;
 
@@ -41,12 +41,12 @@ export const Btn = styled.button`
   transition: color 300ms linear, background-color 300ms linear;
   &:hover {
     color: white;
-    background-color: #359c0c;
+    background-color: #2b7b0c;
   }
 `;
 
 export const Error = styled(ErrorMessage)`
-color: #a81212;
+color: #aa2121;
 font-size: 18px;
 `;
 
@@ -61,7 +61,7 @@ export const LinkWrapper = styled.div`
 `;
 
 export const RegLink = styled(Link)`
-  color: #359c0c;
+  color: #2b7b0c;
   font-size: 22px;
 `;
 

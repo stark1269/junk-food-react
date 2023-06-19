@@ -37,6 +37,6 @@ export const Link = styled(NavLink)`
   transition: color 300ms linear, background-color 300ms linear;
   &:hover {
     color: white;
-    background-color: #359c0c;
+    background-color: #2b7b0c;
   }
 `;

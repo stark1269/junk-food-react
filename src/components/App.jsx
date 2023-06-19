@@ -7,6 +7,7 @@ import { PublicRoute } from './PublicRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { useDispatch, useSelector } from 'react-redux';import { selectIsRefreshing } from 'redux/selectors';
 import { refreshUser } from 'redux/operations';
+import { Layout } from './Layout/Layout';
 
 const HomePage = lazy(() => import('../Pages/HomePage/HomePage'));
 const LoginPage = lazy(() => import('../Pages/LoginPage/LoginPage'));
@@ -27,18 +28,24 @@ export const App = () => {
     setShopCart(state => [...state, item])
   };
 
+  const DeleteShopCart = (id) => {
+    setShopCart(shopCart.filter(item => item.id !== id))
+  };
+
   return isRefreshing ? (
     <b>Refreshing user...</b>
   ) : (
     <Suspense fallback={null}>
       <Routes>
+        <Route element={<Layout shopCart={shopCart} />}>
+          <Route path="/rest" element={<PrivateRoute redirectTo="/" component={<MenuPage menu={menu} />} />} >
+            <Route path='/rest/:name' element={<Menu menu={menu} AddShopCart={AddShopCart} />} />
+          </Route>
+          <Route path="/shop-cart" element={<PrivateRoute redirectTo="/" component={<ShopCartPage shopCart={shopCart} DeleteShopCart={DeleteShopCart} />} />} />
+        </Route>
         <Route path='/' element={<HomePage />} />
         <Route path="/login" element={<PublicRoute redirectTo="/rest" component={<LoginPage />} />} />
         <Route path="/register" element={<PublicRoute redirectTo="/rest" component={<RegisterPage />} />} />
-        <Route path="/shop-cart" element={<PrivateRoute redirectTo="/" component={<ShopCartPage shopCart={shopCart} />} />} />
-        <Route path="/rest" element={<PrivateRoute redirectTo="/" component={<MenuPage menu={menu} shopCart={shopCart} />} />} >
-          <Route path='/rest/:name' element={<Menu menu={menu} AddShopCart={AddShopCart} />} />
-        </Route>
         <Route path='*' element={<Navigate to="/" />} />
       </Routes>
     </Suspense>
