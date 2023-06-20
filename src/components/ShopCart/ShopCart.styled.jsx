@@ -1,16 +1,20 @@
 import { styled } from "styled-components";
 
+export const Wrapp = styled.div`
+  width: 50%;
+`;
+
 export const List = styled.ul`
+  width: 100%;
   padding: 18px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  min-width: calc(70% - 20px);
 `;
 
 export const Item = styled.li`
+  width: calc((100% - 16px) / 2);
   padding: 12px;
-  width: calc((100% - 24px) / 3);
   display: flex;
   flex-direction: column;
   align-items: center;
