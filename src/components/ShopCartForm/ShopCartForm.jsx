@@ -1,5 +1,12 @@
 import { Formik } from 'formik';
-import { Form, Input, Label, Btn } from './ShopCartForm.styled';
+import * as Yup from 'yup';
+import { Form, Input, Label, Btn, Span, Error } from './ShopCartForm.styled';
+
+const Schema = Yup.object({
+  name: Yup.string().required('Required'),
+  phone: Yup.string().required('Required'),
+  address: Yup.string().required('Required'),
+});
 
 export const ShopCartForm = ({ shopCart }) => {
   const order = shopCart.reduce((acc, item) => {
@@ -16,23 +23,27 @@ export const ShopCartForm = ({ shopCart }) => {
           address: '',
         }
       }
+      validationSchema={Schema}
       onSubmit={(value, { resetForm }) => {
         console.log(value, value.order = order)
         resetForm();
       }}
     >
-      <Form>
+      <Form autoComplete='off'>
         <Label>
-          Name
+          <Span>Name</Span>
           <Input type="text" name="name" />
+          <Error name="name" component="div" />
         </Label>
         <Label>
-          Phone
+          <Span>Phone</Span>
           <Input type="tel" name="phone" />
+          <Error name="phone" component="div" />
         </Label>
         <Label>
-          Address
+          <Span>Address</Span>
           <Input type="search" name="address" />
+          <Error name="address" component="div" />
         </Label>
         <Btn type='submit'>Order</Btn>
       </Form>
