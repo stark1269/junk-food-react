@@ -1,6 +1,7 @@
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { Form, Input, Label, Btn, Span, Error } from './ShopCartForm.styled';
+import Notiflix from 'notiflix';
 
 const Schema = Yup.object({
   name: Yup.string().required('Required'),
@@ -8,7 +9,7 @@ const Schema = Yup.object({
   address: Yup.string().required('Required'),
 });
 
-export const ShopCartForm = ({ shopCart }) => {
+export const ShopCartForm = ({ shopCart, setShopCart }) => {
   const order = shopCart.reduce((acc, item) => {
     acc.push({ name: item.name, quantity: item.quantity });
     return acc;
@@ -27,6 +28,8 @@ export const ShopCartForm = ({ shopCart }) => {
       onSubmit={(value, { resetForm }) => {
         console.log(value, value.order = order)
         resetForm();
+        setShopCart([]);
+        Notiflix.Notify.success(`${value.name}, thank you for your order`);
       }}
     >
       <Form autoComplete='off'>
