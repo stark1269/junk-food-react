@@ -62,7 +62,7 @@ export const App = () => {
     <Suspense fallback={null}>
       <Routes>
         <Route element={<Layout shopCart={shopCart} />}>
-          <Route path="/rest" element={<PrivateRoute redirectTo="/" component={<MenuPage menu={menu} />} />} >
+          <Route path="/rest" element={<PrivateRoute redirectTo="/" component={<MenuPage shopCart={shopCart} menu={menu} />} />} >
             <Route path='/rest/:name' element={<Menu menu={menu} AddShopCart={AddShopCart} />} />
           </Route>
           <Route path="/shop-cart" element={<PrivateRoute redirectTo="/" component={<ShopCartPage shopCart={shopCart} setShopCart={setShopCart} DeleteShopCart={DeleteShopCart} updateCart={updateCart} />} />} />
