@@ -12,7 +12,7 @@ export const Form = styled(FormikForm)`
 export const Input = styled(FormikField)`
   font-size: 22px;
   padding: 8px;
-  border-radius: 4px;
+  border-radius: 6px;
 `;
 
 export const Label = styled.label`
@@ -35,9 +35,7 @@ export const Span = styled.span`
 export const Btn = styled.button`
   padding: 8px;
   font-size: 22px;
-  border: 1px solid black;
-  border-radius: 4px;
-  color: black;
+  border-radius: 6px;
   transition: color 300ms linear, background-color 300ms linear;
   &:hover {
     color: white;

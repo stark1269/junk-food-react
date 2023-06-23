@@ -4,9 +4,10 @@ import { RestModal } from "components/Modal/Modal";
 
 export const Restaurants = ({ menu, shopCart, setShopCart }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
-  const showModal = () => {
-    if (shopCart.length) {
+
+  const showModal = (name) => {
+    const restName = shopCart?.some(item => item.rest_name === name)
+    if (shopCart.length && !restName) {
       setIsModalOpen(true);
     }
   };
@@ -16,7 +17,7 @@ export const Restaurants = ({ menu, shopCart, setShopCart }) => {
       <List>
         {menu.map(item => {
           return <Item key={item.id}>
-            <Link onClick={showModal} to={`/rest/${item.rest_name}`}>{item.rest_name}</Link>
+            <Link onClick={() => showModal(item.rest_name)} to={`/rest/${item.rest_name}`}>{item.rest_name}</Link>
           </Item>
         })}
       </List>

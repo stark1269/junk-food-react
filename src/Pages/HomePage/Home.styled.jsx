@@ -32,7 +32,7 @@ export const LinkWrap = styled.div`
 export const Link = styled(NavLink)`
   padding: 8px;
   border: 1px solid black;
-  border-radius: 4px;
+  border-radius: 6px;
   color: black;
   transition: color 300ms linear, background-color 300ms linear;
   &:hover {

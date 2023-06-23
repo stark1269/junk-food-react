@@ -48,9 +48,9 @@ export const Btn = styled.button`
   padding: 6px;
   font-size: 22px;
   font-family: 'Josefin Sans';
-  border: 3px solid black;
+  border: none;
   border-radius: 6px;
-  color: black;
+  background-color: #eeeeee7d;
   transition: color 300ms linear, background-color 300ms linear;
   &:hover {
     color: white;

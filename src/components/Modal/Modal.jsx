@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Backdrop, Modal } from "./Modal.styled";
+import { Backdrop, Modal, BtnWrap, Wrapper, Btn, Text } from "./Modal.styled";
 import { createPortal } from "react-dom";
 
 const modalRoot = document.querySelector('#modal-root');
@@ -20,9 +20,13 @@ export const RestModal = ({ setIsModalOpen, setShopCart }) => {
   return createPortal(
     <Backdrop>
       <Modal>
-        <h2>Shopping cart is not empty</h2>
-        <button onClick={navigateToCart}>Navigate</button>
-        <button onClick={closeAndCrashCart}>Close</button>
+        <Wrapper>
+          <Text>You already have food from another restaurant in your cart. Do you want to start a new order or go back to a previous one?</Text>
+          <BtnWrap>
+            <Btn onClick={navigateToCart}>Go back to the previous</Btn>
+            <Btn onClick={closeAndCrashCart}>Start a new order</Btn>
+          </BtnWrap>
+        </Wrapper>
       </Modal>
     </Backdrop>, modalRoot)
 };

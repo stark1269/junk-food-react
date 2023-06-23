@@ -14,9 +14,9 @@ export const Text = styled.p`
 
 export const Btn = styled.button`
   padding: 4px;
-  border: 1px solid black;
+  border: 2px solid black;
   border-radius: 6px;
-  color: black;
+  background-color: #eeeeee7d;
   transition: color 300ms linear, background-color 300ms linear;
   &:hover {
     color: white;

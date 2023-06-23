@@ -10,8 +10,9 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   padding: 12px;
-  border: black 1px solid;
+  border: none;
   border-radius: 12px;
+  background-color: #eeeeee7d;
 `;
 
 export const Link = styled(NavLink)`
