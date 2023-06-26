@@ -2,6 +2,8 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { Form, Input, Label, Btn, Span, AutocompleteInput } from './ShopCartForm.styled';
 import Notiflix from 'notiflix';
+import { Map } from 'components/Map/Map';
+import { useState } from 'react';
 
 
 const Schema = Yup.object({
@@ -11,6 +13,8 @@ const Schema = Yup.object({
 });
 
 export const ShopCartForm = ({ shopCart, setShopCart }) => {
+  const [coordinate, setCoordinate] = useState({lat: '50.450152', lng: '30.524047'});
+
   const order = shopCart.reduce((acc, item) => {
     acc.push({ name: item.name, quantity: item.quantity });
     return acc;
@@ -44,7 +48,8 @@ export const ShopCartForm = ({ shopCart, setShopCart }) => {
       <Label>
         <Span>Address</Span>
         <AutocompleteInput onPlaceSelected={(place) => {
-          console.log(place.formatted_address.split(', '))
+          const { lat, lng } = place.geometry.location;
+          setCoordinate({ lat: lat() + '', lng: lng() + '' });
           formik.setFieldValue("address", place.formatted_address || '')
         }}
           options={{
@@ -58,6 +63,7 @@ export const ShopCartForm = ({ shopCart, setShopCart }) => {
           value={formik.values.address}
           onChange={formik.handleChange} />
       </Label>
+      <Map coordinate={coordinate} />
       <Btn type='submit'>Order</Btn>
     </Form>
   )
