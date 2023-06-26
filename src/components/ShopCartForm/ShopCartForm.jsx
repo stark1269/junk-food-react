@@ -13,7 +13,7 @@ const Schema = Yup.object({
 });
 
 export const ShopCartForm = ({ shopCart, setShopCart }) => {
-  const [coordinate, setCoordinate] = useState({lat: '50.450152', lng: '30.524047'});
+  const [coordinate, setCoordinate] = useState({lat: 50.450152, lng: 30.524047});
 
   const order = shopCart.reduce((acc, item) => {
     acc.push({ name: item.name, quantity: item.quantity });
@@ -49,7 +49,7 @@ export const ShopCartForm = ({ shopCart, setShopCart }) => {
         <Span>Address</Span>
         <AutocompleteInput onPlaceSelected={(place) => {
           const { lat, lng } = place.geometry.location;
-          setCoordinate({ lat: lat() + '', lng: lng() + '' });
+          setCoordinate({ lat: lat(), lng: lng() });
           formik.setFieldValue("address", place.formatted_address || '')
         }}
           options={{
