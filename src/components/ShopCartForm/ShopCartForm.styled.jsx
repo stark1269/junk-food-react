@@ -1,7 +1,14 @@
-import { Form as FormikForm, Field, ErrorMessage } from "formik";
+// import { ErrorMessage } from "formik";
 import { styled } from "styled-components";
+import Autocomplete from "react-google-autocomplete";
 
-export const Form = styled(FormikForm)`
+export const AutocompleteInput = styled(Autocomplete)`
+  width: 100%;
+  padding: 6px;
+  border-radius: 6px;
+`;
+
+export const Form = styled.form`
   position: sticky;
   top: 22px;
   padding: 22px;
@@ -33,16 +40,16 @@ export const Span = styled.span`
   }
 `;
 
-export const Input = styled(Field)`
+export const Input = styled.input`
   width: 100%;
   padding: 6px;
   border-radius: 6px;
 `;
 
-export const Error = styled(ErrorMessage)`
-color: #aa2121;
-font-size: 16px;
-`;
+// export const Error = styled(ErrorMessage)`
+// color: #aa2121;
+// font-size: 16px;
+// `;
 
 export const Btn = styled.button`
   padding: 6px;
