@@ -44,7 +44,7 @@ export const ShopCartForm = ({ shopCart, setShopCart }) => {
       <Label>
         <Span>Address</Span>
         <AutocompleteInput onPlaceSelected={(place) => {
-          console.log(place)
+          console.log(place.formatted_address.split(', '))
           formik.setFieldValue("address", place.formatted_address || '')
         }}
           options={{
