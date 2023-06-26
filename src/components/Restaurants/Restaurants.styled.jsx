@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 18px;
   width: 30%;
 `;
 
@@ -13,6 +13,7 @@ export const Item = styled.li`
   border: none;
   border-radius: 12px;
   background-color: #eeeeee7d;
+  box-shadow: 4px 4px 4px 0px rgba(80, 80, 80, 0.3);
 `;
 
 export const Link = styled(NavLink)`
