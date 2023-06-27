@@ -5,6 +5,7 @@ import Notiflix from 'notiflix';
 import { Map } from 'components/Map/Map';
 import { useState } from 'react';
 
+const KEY_API = process.env.REACT_APP_API_KEY;
 
 const Schema = Yup.object({
   name: Yup.string().required('Required'),
@@ -13,7 +14,7 @@ const Schema = Yup.object({
 });
 
 export const ShopCartForm = ({ shopCart, setShopCart }) => {
-  const [coordinate, setCoordinate] = useState({lat: 50.450152, lng: 30.524047});
+  const [coordinate, setCoordinate] = useState({ lat: 50.450152, lng: 30.524047 });
 
   const order = shopCart.reduce((acc, item) => {
     acc.push({ name: item.name, quantity: item.quantity });
@@ -56,7 +57,7 @@ export const ShopCartForm = ({ shopCart, setShopCart }) => {
             types: ["address"],
             componentRestrictions: { country: "ua" },
           }}
-          apiKey='AIzaSyCrs9IgGlZ0hl2-4pueyi1ESmZ7nR5YSq4'
+          apiKey={KEY_API}
           type="text"
           name="address"
           placeholder=''

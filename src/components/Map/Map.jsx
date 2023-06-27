@@ -1,5 +1,5 @@
 export const Map = ({ coordinate }) => {
-  const KEY_API = 'AIzaSyCrs9IgGlZ0hl2-4pueyi1ESmZ7nR5YSq4';
+  const KEY_API = process.env.REACT_APP_API_KEY;
   const BASE_URL = 'https://www.google.com/maps/embed/v1/place';
 
   return (
