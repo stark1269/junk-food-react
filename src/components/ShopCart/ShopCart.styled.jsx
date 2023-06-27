@@ -72,6 +72,7 @@ export const Input = styled.input`
 
 export const IncrementBtn = styled.button`
   border-radius: 50%;
+  color: black;
   transition: background-color 300ms linear;
   &:hover {
     background-color: greenyellow;
@@ -80,6 +81,7 @@ export const IncrementBtn = styled.button`
 
 export const DecrementBtn = styled.button`
   border-radius: 50%;
+  color: black;
   transition: color 300ms linear, background-color 300ms linear;
   &:hover {
     color: white;
