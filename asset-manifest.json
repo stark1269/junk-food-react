@@ -1,28 +1,28 @@
 {
   "files": {
     "main.css": "/junk-food-react/static/css/main.7cda0caf.css",
-    "main.js": "/junk-food-react/static/js/main.2fe59315.js",
-    "static/js/82.fa739d52.chunk.js": "/junk-food-react/static/js/82.fa739d52.chunk.js",
-    "static/js/248.38d24f9d.chunk.js": "/junk-food-react/static/js/248.38d24f9d.chunk.js",
-    "static/js/857.9abcbf04.chunk.js": "/junk-food-react/static/js/857.9abcbf04.chunk.js",
-    "static/js/373.76855466.chunk.js": "/junk-food-react/static/js/373.76855466.chunk.js",
+    "main.js": "/junk-food-react/static/js/main.6efcf302.js",
+    "static/js/82.ed617d89.chunk.js": "/junk-food-react/static/js/82.ed617d89.chunk.js",
+    "static/js/248.1fd5745c.chunk.js": "/junk-food-react/static/js/248.1fd5745c.chunk.js",
+    "static/js/857.313a2352.chunk.js": "/junk-food-react/static/js/857.313a2352.chunk.js",
+    "static/js/373.58d76259.chunk.js": "/junk-food-react/static/js/373.58d76259.chunk.js",
     "static/js/445.dc47c922.chunk.js": "/junk-food-react/static/js/445.dc47c922.chunk.js",
     "static/js/705.2ae80019.chunk.js": "/junk-food-react/static/js/705.2ae80019.chunk.js",
     "static/js/903.f1a458a2.chunk.js": "/junk-food-react/static/js/903.f1a458a2.chunk.js",
-    "static/media/FoodBG.jpeg": "/junk-food-react/static/media/FoodBG.6b013f5462448f34b126.jpeg",
+    "static/media/FoodBG.jpeg": "/junk-food-react/static/media/FoodBG.f665dae5d288ab58c10e.jpeg",
     "index.html": "/junk-food-react/index.html",
     "main.7cda0caf.css.map": "/junk-food-react/static/css/main.7cda0caf.css.map",
-    "main.2fe59315.js.map": "/junk-food-react/static/js/main.2fe59315.js.map",
-    "82.fa739d52.chunk.js.map": "/junk-food-react/static/js/82.fa739d52.chunk.js.map",
-    "248.38d24f9d.chunk.js.map": "/junk-food-react/static/js/248.38d24f9d.chunk.js.map",
-    "857.9abcbf04.chunk.js.map": "/junk-food-react/static/js/857.9abcbf04.chunk.js.map",
-    "373.76855466.chunk.js.map": "/junk-food-react/static/js/373.76855466.chunk.js.map",
+    "main.6efcf302.js.map": "/junk-food-react/static/js/main.6efcf302.js.map",
+    "82.ed617d89.chunk.js.map": "/junk-food-react/static/js/82.ed617d89.chunk.js.map",
+    "248.1fd5745c.chunk.js.map": "/junk-food-react/static/js/248.1fd5745c.chunk.js.map",
+    "857.313a2352.chunk.js.map": "/junk-food-react/static/js/857.313a2352.chunk.js.map",
+    "373.58d76259.chunk.js.map": "/junk-food-react/static/js/373.58d76259.chunk.js.map",
     "445.dc47c922.chunk.js.map": "/junk-food-react/static/js/445.dc47c922.chunk.js.map",
     "705.2ae80019.chunk.js.map": "/junk-food-react/static/js/705.2ae80019.chunk.js.map",
     "903.f1a458a2.chunk.js.map": "/junk-food-react/static/js/903.f1a458a2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7cda0caf.css",
-    "static/js/main.2fe59315.js"
+    "static/js/main.6efcf302.js"
   ]
 }
