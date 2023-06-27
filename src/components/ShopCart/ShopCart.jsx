@@ -14,7 +14,7 @@ export const ShopCart = ({ DeleteShopCart, shopCart, updateCart }) => {
         {shopCart.map(item => {
           return (
             <Item key={item.id}>
-              <img src={item.picture} alt={item.name} width={200} />
+              <img loading='lazy' src={item.picture} alt={item.name} width={200} />
               <Text>{item.name}</Text>
               <Text>Price: {item.price * item.quantity}$</Text>
               <Div>

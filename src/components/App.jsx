@@ -6,7 +6,9 @@ import { PrivateRoute } from './PrivateRoute';
 import { useDispatch, useSelector } from 'react-redux';import { selectIsRefreshing } from 'redux/selectors';
 import { refreshUser } from 'redux/operations';
 import { Layout } from './Layout/Layout';
+import { Logo } from './Logo/Logo';
 import restaurants from 'api/api.json';
+
 
 const HomePage = lazy(() => import('../Pages/HomePage/HomePage'));
 const LoginPage = lazy(() => import('../Pages/LoginPage/LoginPage'));
@@ -57,7 +59,7 @@ export const App = () => {
   };
 
   return isRefreshing ? (
-    <b>Refreshing user...</b>
+    <Logo/>
   ) : (
     <Suspense fallback={null}>
       <Routes>

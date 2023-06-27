@@ -12,7 +12,7 @@ export const Menu = ({ menu, AddShopCart }) => {
         {foods.map(item => {
           return (
             <Item key={item.id}>
-              <img src={item.picture} alt={item.name} width={200} />
+              <img loading="lazy" src={item.picture} alt={item.name} width={200} />
               <Text>{item.name}</Text>
               <Text>Price: {item.price}$</Text>
               <Button onClick={() => AddShopCart(item, item.id)}><TbShoppingCartPlus /></Button>

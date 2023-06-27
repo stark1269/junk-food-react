@@ -9,6 +9,7 @@ export const Map = ({ coordinate }) => {
       title="map"
       width={'100%'}
       height={300}
+      loading="lazy"
       allowFullScreen
       referrerPolicy="no-referrer-when-downgrade"
       src={`${BASE_URL}?key=${KEY_API}
