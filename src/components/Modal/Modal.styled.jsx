@@ -41,6 +41,7 @@ export const Btn = styled.button`
   padding: 4px;
   font-weight: 500;
   border: none;
+  color: black;
   background-color: white;
   transition: background-color 300ms linear;
   &:hover {
