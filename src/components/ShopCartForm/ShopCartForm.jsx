@@ -5,7 +5,7 @@ import Notiflix from 'notiflix';
 import { Map } from 'components/Map/Map';
 import { useState } from 'react';
 
-const KEY_API = process.env.REACT_APP_API_KEY;
+const KEY_API = 'AIzaSyCrs9IgGlZ0hl2-4pueyi1ESmZ7nR5YSq4';
 
 const Schema = Yup.object({
   name: Yup.string().required('Required'),
