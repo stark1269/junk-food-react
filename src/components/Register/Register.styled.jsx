@@ -37,6 +37,7 @@ export const Btn = styled.button`
   padding: 8px;
   font-size: 22px;
   border-radius: 6px;
+  color: black;
   background-color: white;
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.4) inset;
   transition: background-color 300ms linear;
