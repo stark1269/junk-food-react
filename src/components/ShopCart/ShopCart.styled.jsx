@@ -71,6 +71,7 @@ export const Input = styled.input`
 `;
 
 export const IncrementBtn = styled.button`
+  width: 24px;
   border-radius: 50%;
   color: black;
   transition: background-color 300ms linear;
@@ -80,6 +81,7 @@ export const IncrementBtn = styled.button`
 `;
 
 export const DecrementBtn = styled.button`
+  width: 24px;
   border-radius: 50%;
   color: black;
   transition: color 300ms linear, background-color 300ms linear;
