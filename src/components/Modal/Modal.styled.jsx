@@ -6,7 +6,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background-color: rgba(0,0,0,.8);
+background-color: rgba(60, 60, 60, 0.8);
 `;
 
 export const Modal = styled.div`
@@ -17,7 +17,7 @@ transform: translate(-50%, -50%);
 width: 90%;
 padding: 18px;
 border-radius: 6px;
-background-color: white;
+background-color: black;
 @media (min-width: 768px) {
   width: 400px;
   height: 250px;
@@ -41,11 +41,10 @@ export const Btn = styled.button`
   padding: 4px;
   font-weight: 500;
   border: none;
-  background-color: #eeeeee7d;
-  transition: color 300ms linear, background-color 300ms linear;
+  background-color: white;
+  transition: background-color 300ms linear;
   &:hover {
-    color: white;
-    background-color: #2b7b0c;
+    background-color: greenyellow;
   }
 `;
 
@@ -53,4 +52,5 @@ export const Text = styled.p`
   text-align: center;
   font-size: 24px;
   font-family: 'Josefin Sans';
+  color: white;
 `;

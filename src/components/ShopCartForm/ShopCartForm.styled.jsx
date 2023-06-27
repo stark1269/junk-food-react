@@ -6,6 +6,8 @@ export const AutocompleteInput = styled(Autocomplete)`
   width: 100%;
   padding: 6px;
   border-radius: 6px;
+  color: white;
+  background-color: #00000070;
 `;
 
 export const Form = styled.form`
@@ -48,6 +50,8 @@ export const Input = styled.input`
   width: 100%;
   padding: 6px;
   border-radius: 6px;
+  color: white;
+  background-color: #00000070;
 `;
 
 export const Btn = styled.button`
@@ -56,10 +60,9 @@ export const Btn = styled.button`
   font-family: 'Josefin Sans';
   border: none;
   border-radius: 6px;
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: #00000070;
   transition: color 300ms linear, background-color 300ms linear;
-  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.4) inset;
   &:hover {
     color: black;
     background-color: greenyellow;
