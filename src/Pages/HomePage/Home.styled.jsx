@@ -3,40 +3,52 @@ import { styled } from "styled-components";
 import photo from '../../images/FoodBG.jpeg';
 
 export const Div = styled.div`
-  padding: 120px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 12px;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.2),rgba(255,255,255,.2)),url(${photo});
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url(${photo});
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
   width: 100vw;
   height: 100vh;
 `;
 
 export const Title = styled.h1`
-  font-size: 44px;
+  font-size: 34px;
   font-family: 'Josefin Sans';
+  color: white;
+  text-align: center;
+  @media (min-width: 768px) {
+    font-size: 44px;
+  }
 `;
 
 export const Text = styled.p`
-  font-size: 26px;
+  font-size: 18px;
   font-family: 'Josefin Sans';
+  color: white;
+  text-align: center;
+  @media (min-width: 768px) {
+    font-size: 26px;
+  }
 `;
 
 export const LinkWrap = styled.div`
   display: flex;
+  justify-content: center;
   gap: 12px;
 `;
 
 export const Link = styled(NavLink)`
   padding: 8px;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 6px;
-  color: black;
+  color: white;
   transition: color 300ms linear, background-color 300ms linear;
   &:hover {
-    color: white;
-    background-color: #2b7b0c;
+    color: black;
+    background-color: greenyellow;
   }
 `;

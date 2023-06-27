@@ -15,5 +15,3 @@ export const Wrapper = styled.div`
 export const Img = styled.img`
   animation: ${animate} 2s linear infinite;
 `;
-
-

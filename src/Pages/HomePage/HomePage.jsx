@@ -7,10 +7,10 @@ const HomePage = () => {
 
   return (
     <Div>
-      <Title>Welcome to our Junk Food app.</Title>
+      <Title>Burger delivery</Title>
       <Text>Please log in or register to continue.</Text>
       <LinkWrap>
-        {isLoggedIn ? <Link to='/rest'>Visit restaurants</Link> : <><Link to='/login' >Log in</Link>
+        {isLoggedIn ? <Link to='/rest'>Visit the burgers</Link> : <><Link to='/login' >Log in</Link>
           <Link to='/register' >Sing up</Link></>}
       </LinkWrap>
     </Div>

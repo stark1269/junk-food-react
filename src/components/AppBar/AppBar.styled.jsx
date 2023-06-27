@@ -2,26 +2,35 @@ import { styled } from "styled-components";
 import { Link as RauteLink, NavLink } from "react-router-dom";
 
 export const Header = styled.header`
-  padding: 18px;
+  padding: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #eeeeee7d;
+  background-color: #00000070;
+  @media (min-width: 768px) {
+    padding: 18px;
+  }
 `;
 
 export const Wrapp = styled.div`
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 8px;
+  @media (min-width: 768px) {
+    gap: 18px;
+  }
 `;
 
 export const Link = styled(RauteLink)`
-  font-size: 32px;
+  font-size: 22px;
   font-family: 'Josefin Sans';
-  color: black;
+  color: white;
   transition: transform 300ms linear;
   &:hover {
     transform: scale(1.05);
+  }
+  @media (min-width: 768px) {
+    font-size: 32px;
   }
 `;
 
@@ -29,8 +38,11 @@ export const LinkIcon = styled(NavLink)`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 46px;
+  font-size: 34px;
   font-family: 'Josefin Sans';
-  color: ${p => p.length ? "#2b7b0c" : "#aa2121"};
+  color: ${p => p.length ? "greenyellow" : "orangered"};
+  @media (min-width: 768px) {
+    font-size: 46px;
+  }
 `;
 

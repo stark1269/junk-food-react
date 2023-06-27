@@ -5,7 +5,8 @@ import styled from "styled-components";
 export const Form = styled(FormikForm)`
   display: flex;
   flex-direction: column;
-  align-items: start;
+  justify-content: center;
+  align-items: center;
   gap: 12px;
 `;
 
@@ -20,7 +21,7 @@ export const Label = styled.label`
   flex-direction: column;
   gap: 4px;
   font-size: 18px;
-  color: #000000;
+  color: white;
 `;
 
 export const Span = styled.span`
@@ -28,7 +29,7 @@ export const Span = styled.span`
   &::after {
     content: '*';
     position: absolute;
-    color: #aa2121;
+    color: orangered;
   }
 `;
 
@@ -36,16 +37,18 @@ export const Btn = styled.button`
   padding: 8px;
   font-size: 22px;
   border-radius: 6px;
-  transition: color 300ms linear, background-color 300ms linear;
+  background-color: white;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.4) inset;
+  transition: background-color 300ms linear;
   &:hover {
-    color: white;
-    background-color: #2b7b0c;
+    background-color: greenyellow;
   }
 `;
 
 export const Error = styled(ErrorMessage)`
-color: #aa2121;
+color: orangered;
 font-size: 18px;
+font-weight: 700;
 `;
 
 export const Wrapper = styled.div`
@@ -59,7 +62,7 @@ export const LinkWrapper = styled.div`
 `;
 
 export const RegLink = styled(Link)`
-  color: #2b7b0c;
+  color: greenyellow;
   font-size: 22px;
 `;
 
