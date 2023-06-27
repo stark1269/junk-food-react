@@ -24,6 +24,7 @@ export const Btn = styled.button`
   padding: 4px;
   border: 2px solid black;
   border-radius: 6px;
+  color: black;
   background-color: white;
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.4) inset;
   transition: color 300ms linear, background-color 300ms linear;
