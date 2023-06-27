@@ -59,6 +59,7 @@ export const Btn = styled.button`
   border-radius: 6px;
   background-color: #eeeeee7d;
   transition: color 300ms linear, background-color 300ms linear;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.4) inset;
   &:hover {
     color: white;
     background-color: #2b7b0c;
