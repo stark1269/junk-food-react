@@ -1,21 +1,26 @@
 import { styled } from "styled-components";
 
 export const Wrapp = styled.div`
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 18px;
+  @media (min-width: 768px) {
+    width: 50%;
+  }
 `;
 
 export const Title = styled.h2`
   font-size: 38px;
   font-family: 'Josefin Sans';
+  color: white;
 `;
 
 export const Text = styled.p`
   font-size: 24px;
   font-weight: 700;
   font-family: 'Josefin Sans';
+  color: white;
 `;
 
 export const List = styled.ul`
@@ -26,7 +31,7 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
-  width: calc((100% - 16px) / 2);
+  width: 100%;
   position: relative;
   padding: 18px;
   display: flex;
@@ -34,7 +39,10 @@ export const Item = styled.li`
   align-items: center;
   gap: 6px;
   border-radius: 12px;
-  background-color: #eeeeee7d;
+  background-color: #00000070;
+  @media (min-width: 768px) {
+    width: calc((100% - 16px) / 2);
+  }
 `;
 
 export const Button = styled.button`
@@ -43,7 +51,7 @@ export const Button = styled.button`
   right: 4px;
   border: none;
   background-color: transparent;
-  color: #aa2121;
+  color: orangered;
   font-size: 22px;
   transition: transform 300ms linear;
   &:hover {
@@ -64,10 +72,9 @@ export const Input = styled.input`
 
 export const IncrementBtn = styled.button`
   border-radius: 50%;
-  transition: color 300ms linear, background-color 300ms linear;
+  transition: background-color 300ms linear;
   &:hover {
-    color: white;
-    background-color: #2b7b0c;
+    background-color: greenyellow;
   }
 `;
 
@@ -76,6 +83,6 @@ export const DecrementBtn = styled.button`
   transition: color 300ms linear, background-color 300ms linear;
   &:hover {
     color: white;
-    background-color: #aa2121;
+    background-color: orangered;
   }
 `;

@@ -9,7 +9,6 @@ export const AutocompleteInput = styled(Autocomplete)`
 `;
 
 export const Form = styled.form`
-  position: sticky;
   top: 22px;
   padding: 22px;
   display: flex;
@@ -18,8 +17,12 @@ export const Form = styled.form`
   gap: 10px;
   border: 1px solid black;
   border-radius: 12px;
-  width: 50%;
+  width: 100%;
   height: 100%;
+  @media (min-width: 768px) {
+    position: sticky;
+    width: 50%;
+  }
 `;
 
 export const Label = styled.label`
@@ -28,6 +31,7 @@ export const Label = styled.label`
   gap: 6px;
   width: 100%;
   font-size: 22px;
+  color: white;
 `;
 
 export const Span = styled.span`
@@ -36,7 +40,7 @@ export const Span = styled.span`
   &::after {
     content: '*';
     position: absolute;
-    color: #aa2121;
+    color: orangered;
   }
 `;
 
@@ -46,22 +50,23 @@ export const Input = styled.input`
   border-radius: 6px;
 `;
 
-// export const Error = styled(ErrorMessage)`
-// color: #aa2121;
-// font-size: 16px;
-// `;
-
 export const Btn = styled.button`
   padding: 6px;
   font-size: 22px;
   font-family: 'Josefin Sans';
   border: none;
   border-radius: 6px;
-  background-color: #eeeeee7d;
+  color: black;
+  background-color: white;
   transition: color 300ms linear, background-color 300ms linear;
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.4) inset;
   &:hover {
-    color: white;
-    background-color: #2b7b0c;
+    color: black;
+    background-color: greenyellow;
   }
 `;
+
+// export const Error = styled(ErrorMessage)`
+// color: #aa2121;
+// font-size: 16px;
+// `;
