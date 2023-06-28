@@ -18,7 +18,7 @@ export const Div = styled.div`
 export const Title = styled.h1`
   font-size: 34px;
   font-family: 'Josefin Sans';
-  color: white;
+  color: ${p => p.theme.colors.white};
   text-align: center;
   @media (min-width: 768px) {
     font-size: 44px;
@@ -28,7 +28,7 @@ export const Title = styled.h1`
 export const Text = styled.p`
   font-size: 18px;
   font-family: 'Josefin Sans';
-  color: white;
+  color: ${p => p.theme.colors.white};
   text-align: center;
   @media (min-width: 768px) {
     font-size: 26px;
@@ -45,10 +45,9 @@ export const Link = styled(NavLink)`
   padding: 8px;
   border: 1px solid white;
   border-radius: 6px;
-  color: white;
-  transition: color 300ms linear, background-color 300ms linear;
+  color: ${p => p.theme.colors.white};
+  transition: background-color 300ms linear;
   &:hover {
-    color: black;
-    background-color: greenyellow;
+    background-color: ${p => p.theme.colors.current};
   }
 `;

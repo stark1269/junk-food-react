@@ -4,16 +4,30 @@ import { App } from 'components/App';
 import { GlobalStyle } from 'components/GlobalStyle';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import { ThemeProvider } from 'styled-components';
 import { PersistGate } from 'redux-persist/integration/react';
 import { persistor, store } from 'redux/store';
+
+const theme = {
+  colors: {
+    black: '#000000',
+    white: '#ffffff',
+    bgc: '#00000070',
+    error: '#ef4e13',
+    success: '#92dd19',
+    current: '#5900a3',
+  },
+};
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <BrowserRouter basename='/junk-food-react'>
-          <App />
-          <GlobalStyle />
+          <ThemeProvider theme={theme}>
+            <App />
+            <GlobalStyle />
+          </ThemeProvider>
         </BrowserRouter>
       </PersistGate>
     </Provider>

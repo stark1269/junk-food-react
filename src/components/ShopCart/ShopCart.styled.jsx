@@ -13,14 +13,14 @@ export const Wrapp = styled.div`
 export const Title = styled.h2`
   font-size: 38px;
   font-family: 'Josefin Sans';
-  color: white;
+  color: ${p => p.theme.colors.white};
 `;
 
 export const Text = styled.p`
   font-size: 24px;
   font-weight: 700;
   font-family: 'Josefin Sans';
-  color: white;
+  color: ${p => p.theme.colors.white};
 `;
 
 export const List = styled.ul`
@@ -39,7 +39,7 @@ export const Item = styled.li`
   align-items: center;
   gap: 6px;
   border-radius: 12px;
-  background-color: #00000070;
+  background-color: ${p => p.theme.colors.bgc};
   @media (min-width: 768px) {
     width: calc((100% - 16px) / 2);
   }
@@ -51,7 +51,7 @@ export const Button = styled.button`
   right: 0;
   border: none;
   background-color: transparent;
-  color: orangered;
+  color: ${p => p.theme.colors.error};
   font-size: 22px;
   transition: transform 300ms linear;
   &:hover {
@@ -77,10 +77,11 @@ export const IncrementBtn = styled.button`
   width: 26px;
   height: 26px;
   border-radius: 50%;
-  color: black;
+  border: none;
+  color: ${p => p.theme.colors.black};
   transition: background-color 300ms linear;
   &:hover {
-    background-color: greenyellow;
+    background-color: ${p => p.theme.colors.success};
   }
 `;
 
@@ -90,11 +91,12 @@ export const DecrementBtn = styled.button`
   align-items: center;
   width: 26px;
   height: 26px;
+  border: none;
   border-radius: 50%;
-  color: black;
+  color: ${p => p.theme.colors.black};
   transition: color 300ms linear, background-color 300ms linear;
   &:hover {
-    color: white;
-    background-color: orangered;
+    color: ${p => p.theme.colors.white};
+    background-color: ${p => p.theme.colors.error};
   }
 `;

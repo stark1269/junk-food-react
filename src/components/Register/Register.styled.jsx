@@ -21,7 +21,7 @@ export const Label = styled.label`
   flex-direction: column;
   gap: 4px;
   font-size: 18px;
-  color: white;
+  color: ${p => p.theme.colors.white};
 `;
 
 export const Span = styled.span`
@@ -29,7 +29,7 @@ export const Span = styled.span`
   &::after {
     content: '*';
     position: absolute;
-    color: orangered;
+    color: ${p => p.theme.colors.error};
   }
 `;
 
@@ -37,17 +37,18 @@ export const Btn = styled.button`
   padding: 8px;
   font-size: 22px;
   border-radius: 6px;
-  color: black;
-  background-color: white;
+  color: ${p => p.theme.colors.black};
+  background-color: ${p => p.theme.colors.white};
   box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.4) inset;
-  transition: background-color 300ms linear;
+  transition: color 300ms linear, background-color 300ms linear;
   &:hover {
-    background-color: greenyellow;
+    color: ${p => p.theme.colors.white};
+    background-color: ${p => p.theme.colors.current};
   }
 `;
 
 export const Error = styled(ErrorMessage)`
-color: orangered;
+color: ${p => p.theme.colors.error};
 font-size: 18px;
 font-weight: 700;
 `;
@@ -63,7 +64,7 @@ export const LinkWrapper = styled.div`
 `;
 
 export const RegLink = styled(Link)`
-  color: greenyellow;
+  color: ${p => p.theme.colors.success};
   font-size: 22px;
 `;
 
@@ -74,6 +75,6 @@ export const Button = styled.button`
   padding: 0;
   font-size: 24px;
   border: none;
-  color: black;
+  color: ${p => p.theme.colors.black};
   background-color: transparent;
 `;

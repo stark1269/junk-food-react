@@ -17,7 +17,7 @@ transform: translate(-50%, -50%);
 width: 90%;
 padding: 18px;
 border-radius: 6px;
-background-color: black;
+background-color: ${p => p.theme.colors.black};
 @media (min-width: 768px) {
   width: 400px;
   height: 250px;
@@ -41,11 +41,12 @@ export const Btn = styled.button`
   padding: 4px;
   font-weight: 500;
   border: none;
-  color: black;
-  background-color: white;
-  transition: background-color 300ms linear;
+  color: ${p => p.theme.colors.black};
+  background-color: ${p => p.theme.colors.white};
+  transition: color 300ms linear, background-color 300ms linear;
   &:hover {
-    background-color: greenyellow;
+    color: ${p => p.theme.colors.white};
+    background-color: ${p => p.theme.colors.current};
   }
 `;
 
@@ -53,5 +54,5 @@ export const Text = styled.p`
   text-align: center;
   font-size: 24px;
   font-family: 'Josefin Sans';
-  color: white;
+  color: ${p => p.theme.colors.white};
 `;

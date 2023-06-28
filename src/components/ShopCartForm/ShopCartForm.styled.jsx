@@ -6,8 +6,8 @@ export const AutocompleteInput = styled(Autocomplete)`
   width: 100%;
   padding: 6px;
   border-radius: 6px;
-  color: white;
-  background-color: #00000070;
+  color: ${p => p.theme.colors.white};
+  background-color: ${p => p.theme.colors.bgc};
 `;
 
 export const Form = styled.form`
@@ -33,7 +33,7 @@ export const Label = styled.label`
   gap: 6px;
   width: 100%;
   font-size: 22px;
-  color: white;
+  color: ${p => p.theme.colors.white};
 `;
 
 export const Span = styled.span`
@@ -42,7 +42,7 @@ export const Span = styled.span`
   &::after {
     content: '*';
     position: absolute;
-    color: orangered;
+    color: ${p => p.theme.colors.error};
   }
 `;
 
@@ -50,8 +50,8 @@ export const Input = styled.input`
   width: 100%;
   padding: 6px;
   border-radius: 6px;
-  color: white;
-  background-color: #00000070;
+  color: ${p => p.theme.colors.white};
+  background-color: ${p => p.theme.colors.bgc};
 `;
 
 export const Btn = styled.button`
@@ -60,12 +60,11 @@ export const Btn = styled.button`
   font-family: 'Josefin Sans';
   border: none;
   border-radius: 6px;
-  color: white;
-  background-color: #00000070;
-  transition: color 300ms linear, background-color 300ms linear;
+  color: ${p => p.theme.colors.white};
+  background-color: ${p => p.theme.colors.bgc};
+  transition: background-color 300ms linear;
   &:hover {
-    color: black;
-    background-color: greenyellow;
+    background-color: ${p => p.theme.colors.current};
   }
 `;
 

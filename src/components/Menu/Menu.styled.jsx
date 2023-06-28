@@ -18,7 +18,7 @@ export const Item = styled.li`
   align-items: center;
   gap: 6px;
   border-radius: 12px;
-  background-color: #00000070;
+  background-color: ${p => p.theme.colors.bgc};
   @media (min-width: 768px) {
     width: calc((100% - 24px) / 3);
   }
@@ -28,7 +28,7 @@ export const Text = styled.p`
   font-size: 24px;
   font-weight: 700;
   font-family: 'Josefin Sans';
-  color: white;
+  color: ${p => p.theme.colors.white};
 `;
 
 export const Button = styled.button`
@@ -37,7 +37,7 @@ export const Button = styled.button`
   right: 0;
   border: none;
   background-color: transparent;
-  color: greenyellow;
+  color: ${p => p.theme.colors.current};
   font-size: 32px;
   transition: transform 300ms linear;
   &:hover {
