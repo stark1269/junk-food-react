@@ -4,6 +4,7 @@ import { Form, Input, Label, Btn, Span, AutocompleteInput } from './ShopCartForm
 import Notiflix from 'notiflix';
 import { Map } from 'components/Map/Map';
 import { useState } from 'react';
+import { useMask } from '@react-input/mask';
 
 const KEY_API = 'AIzaSyCrs9IgGlZ0hl2-4pueyi1ESmZ7nR5YSq4';
 
@@ -14,6 +15,7 @@ const Schema = Yup.object({
 });
 
 export const ShopCartForm = ({ shopCart, setShopCart }) => {
+  const inputRef = useMask({ mask: '+38 (___) ___-__-__', replacement: { _: /\d/ } });
   const [coordinate, setCoordinate] = useState({ lat: 50.450152, lng: 30.524047 });
 
   const order = shopCart.reduce((acc, item) => {
@@ -40,11 +42,11 @@ export const ShopCartForm = ({ shopCart, setShopCart }) => {
     <Form onSubmit={formik.handleSubmit}>
       <Label>
         <Span>Name</Span>
-        <Input type="text" name="name" value={formik.values.name} onChange={formik.handleChange} />
+        <Input placeholder='Please enter your name' type="text" name="name" value={formik.values.name} onChange={formik.handleChange} />
       </Label>
       <Label>
         <Span>Phone</Span>
-        <Input type="tel" name="phone" value={formik.values.phone} onChange={formik.handleChange} />
+        <Input ref={inputRef} placeholder='+38 (066) 123-45-67' type="text" name="phone" value={formik.values.phone} onChange={formik.handleChange} />
       </Label>
       <Label>
         <Span>Address</Span>
