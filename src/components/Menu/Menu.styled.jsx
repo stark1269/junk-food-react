@@ -34,7 +34,7 @@ export const Text = styled.p`
 export const Button = styled.button`
   position: absolute;
   bottom: 4px;
-  right: 4px;
+  right: 0;
   border: none;
   background-color: transparent;
   color: greenyellow;
