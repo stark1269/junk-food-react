@@ -74,8 +74,6 @@ export const IncrementBtn = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 26px;
-  height: 26px;
   border-radius: 50%;
   border: none;
   color: ${p => p.theme.colors.black};
@@ -89,8 +87,6 @@ export const DecrementBtn = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 26px;
-  height: 26px;
   border: none;
   border-radius: 50%;
   color: ${p => p.theme.colors.black};
