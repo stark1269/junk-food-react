@@ -65,7 +65,7 @@ export const Div = styled.div`
 `;
 
 export const Input = styled.input`
-  width: 42px;
+  width: 46px;
   text-align: center;
   border-radius: 6px;
 `;
