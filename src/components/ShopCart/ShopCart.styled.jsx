@@ -48,7 +48,7 @@ export const Item = styled.li`
 export const Button = styled.button`
   position: absolute;
   top: 4px;
-  right: 4px;
+  right: 0;
   border: none;
   background-color: transparent;
   color: orangered;
