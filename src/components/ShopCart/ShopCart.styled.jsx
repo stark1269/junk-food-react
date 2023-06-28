@@ -36,8 +36,8 @@ export const Item = styled.li`
   padding: 18px;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  gap: 6px;
   border-radius: 12px;
   background-color: ${p => p.theme.colors.bgc};
   @media (min-width: 768px) {
@@ -65,7 +65,7 @@ export const Div = styled.div`
 `;
 
 export const Input = styled.input`
-  width: 34px;
+  width: 42px;
   text-align: center;
   border-radius: 6px;
 `;
@@ -74,6 +74,8 @@ export const IncrementBtn = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   border: none;
   color: ${p => p.theme.colors.black};
@@ -87,6 +89,8 @@ export const DecrementBtn = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 32px;
+  height: 32px;
   border: none;
   border-radius: 50%;
   color: ${p => p.theme.colors.black};

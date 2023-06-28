@@ -15,8 +15,8 @@ export const Item = styled.li`
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  gap: 6px;
   border-radius: 12px;
   background-color: ${p => p.theme.colors.bgc};
   @media (min-width: 768px) {
