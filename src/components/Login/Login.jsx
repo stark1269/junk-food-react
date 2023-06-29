@@ -18,7 +18,7 @@ export const Login = () => {
         dispatch(logIn(value))
         resetForm();
       }}>
-      <Form>
+      <Form autoComplete='off'>
         <Label>
           Email
           <Input type="email" name="email" />
