@@ -1,15 +1,16 @@
-import axios from 'axios';
 import Notiflix from 'notiflix';
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { clearToken, setToken } from '../services/axios';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
+import { auth } from '../firebase/config';
+import { setUser, refreshingOff } from './slice';
+
 
 export const register = createAsyncThunk(
   'auth/register',
-  async (credentials, { rejectWithValue }) => {
+  async ({ email, password }, { rejectWithValue }) => {
     try {
-      const { data } = await axios.post('/users/signup', credentials);
-      setToken(data.token);
-      return data;
+      const data = await createUserWithEmailAndPassword(auth, email, password);
+      return { email: data.user.email };
     } catch (error) {
       Notiflix.Notify.failure('User validation failed');
       return rejectWithValue(error.message);
@@ -18,11 +19,10 @@ export const register = createAsyncThunk(
 
 export const logIn = createAsyncThunk(
   'auth/login',
-  async (credentials, { rejectWithValue }) => {
+  async ({email, password}, { rejectWithValue }) => {
     try {
-      const { data } = await axios.post('/users/login', credentials);
-      setToken(data.token);
-      return data;
+      const data = await signInWithEmailAndPassword(auth, email, password);
+      return { email: data.user.email };
     } catch (error) {
       Notiflix.Notify.failure('Incorrect user name or password!')
       return rejectWithValue(error.message);
@@ -33,28 +33,24 @@ export const logOut = createAsyncThunk(
   'auth/logout',
   async (_, { rejectWithValue }) => {
     try {
-      await axios.post('/users/logout');
-      clearToken();
+      await signOut(auth);
     } catch (error) {
       return rejectWithValue(error.message);
     }
   });
 
-export const refreshUser = createAsyncThunk(
-  'auth/refresh',
-  async (_, { rejectWithValue, getState }) => {
-    const state = getState();
-    const { token } = state.auth;
-
-    if (token === null) {
-      return rejectWithValue('Unable to fetch user');
-    }
-
-    try {
-      setToken(token);
-      const { data } = await axios('/users/current');
-      return data;
-    } catch (error) {
-      return rejectWithValue(error.message);
-    }
-  });
+export const refreshUser = createAsyncThunk('auth/refresh', (_, { rejectWithValue, dispatch }) => {
+  try {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        dispatch(setUser({ email: user.email }));
+      }
+      else {
+        signOut(auth);
+        dispatch(refreshingOff());
+      }
+    })
+  } catch (error) {
+    return rejectWithValue(error.message);
+  }
+});

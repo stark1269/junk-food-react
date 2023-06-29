@@ -5,8 +5,7 @@ import { GlobalStyle } from 'components/GlobalStyle';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
-import { PersistGate } from 'redux-persist/integration/react';
-import { persistor, store } from 'redux/store';
+import { store } from 'redux/store';
 
 const theme = {
   colors: {
@@ -22,14 +21,12 @@ const theme = {
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
         <BrowserRouter basename='/junk-food-react'>
           <ThemeProvider theme={theme}>
             <App />
             <GlobalStyle />
           </ThemeProvider>
         </BrowserRouter>
-      </PersistGate>
     </Provider>
   </React.StrictMode>
 );
