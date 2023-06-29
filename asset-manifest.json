@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/junk-food-react/static/css/main.7cda0caf.css",
-    "main.js": "/junk-food-react/static/js/main.51d460bc.js",
+    "main.js": "/junk-food-react/static/js/main.0e921f47.js",
     "static/js/82.6c0560b0.chunk.js": "/junk-food-react/static/js/82.6c0560b0.chunk.js",
-    "static/js/248.74c23632.chunk.js": "/junk-food-react/static/js/248.74c23632.chunk.js",
+    "static/js/248.27f370f2.chunk.js": "/junk-food-react/static/js/248.27f370f2.chunk.js",
     "static/js/857.0562d7cc.chunk.js": "/junk-food-react/static/js/857.0562d7cc.chunk.js",
     "static/js/373.b776c4f0.chunk.js": "/junk-food-react/static/js/373.b776c4f0.chunk.js",
     "static/js/445.e44adcbf.chunk.js": "/junk-food-react/static/js/445.e44adcbf.chunk.js",
@@ -13,9 +13,9 @@
     "static/media/FoodBG.jpeg": "/junk-food-react/static/media/FoodBG.f665dae5d288ab58c10e.jpeg",
     "index.html": "/junk-food-react/index.html",
     "main.7cda0caf.css.map": "/junk-food-react/static/css/main.7cda0caf.css.map",
-    "main.51d460bc.js.map": "/junk-food-react/static/js/main.51d460bc.js.map",
+    "main.0e921f47.js.map": "/junk-food-react/static/js/main.0e921f47.js.map",
     "82.6c0560b0.chunk.js.map": "/junk-food-react/static/js/82.6c0560b0.chunk.js.map",
-    "248.74c23632.chunk.js.map": "/junk-food-react/static/js/248.74c23632.chunk.js.map",
+    "248.27f370f2.chunk.js.map": "/junk-food-react/static/js/248.27f370f2.chunk.js.map",
     "857.0562d7cc.chunk.js.map": "/junk-food-react/static/js/857.0562d7cc.chunk.js.map",
     "373.b776c4f0.chunk.js.map": "/junk-food-react/static/js/373.b776c4f0.chunk.js.map",
     "445.e44adcbf.chunk.js.map": "/junk-food-react/static/js/445.e44adcbf.chunk.js.map",
@@ -25,6 +25,6 @@
   },
   "entrypoints": [
     "static/css/main.7cda0caf.css",
-    "static/js/main.51d460bc.js"
+    "static/js/main.0e921f47.js"
   ]
 }
