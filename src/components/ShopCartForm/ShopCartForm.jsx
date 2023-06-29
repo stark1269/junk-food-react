@@ -39,7 +39,7 @@ export const ShopCartForm = ({ shopCart, setShopCart }) => {
   });
 
   return (
-    <Form onSubmit={formik.handleSubmit}>
+    <Form autoComplete='off' onSubmit={formik.handleSubmit}>
       <Label>
         <Span>Name</Span>
         <Input placeholder='Please enter your name' type="text" name="name" value={formik.values.name} onChange={formik.handleChange} />
