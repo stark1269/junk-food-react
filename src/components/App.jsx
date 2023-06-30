@@ -17,15 +17,24 @@ const RegisterPage = lazy(() => import('../Pages/RegisterPage/RegisterPage'));
 const MenuPage = lazy(() => import('../Pages/MenuPage/MenuPage'));
 const ShopCartPage = lazy(() => import('Pages/ShopCartPage/ShopCartPage'));
 
+const getInitShopCart = () => {
+  const SavedShopCart = JSON.parse(localStorage.getItem('shoppingCart'));
+  return SavedShopCart ? SavedShopCart : [];
+};
+
 export const App = () => {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectIsRefreshing);
   const [menu] = useState(restaurants);
-  const [shopCart, setShopCart] = useState([]);
+  const [shopCart, setShopCart] = useState(getInitShopCart);
 
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
+
+  useEffect(() => {
+    localStorage.setItem('shoppingCart', JSON.stringify(shopCart));
+  }, [shopCart]);
 
   const AddShopCart = (item, id) => {
     const repeatDish = shopCart.find(cartItem => cartItem.id === id);
@@ -64,7 +73,7 @@ export const App = () => {
   ) : (
     <Suspense fallback={null}>
       <Routes>
-        <Route element={<Layout shopCart={shopCart} />}>
+        <Route element={<Layout setShopCart={setShopCart} />}>
           <Route path="/rest" element={<PrivateRoute redirectTo="/" component={<MenuPage shopCart={shopCart} setShopCart={setShopCart} menu={menu} />} />} >
             <Route path='/rest/:name' element={<Menu menu={menu} AddShopCart={AddShopCart} />} />
           </Route>
