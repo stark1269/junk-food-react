@@ -5,6 +5,7 @@ import Notiflix from 'notiflix';
 import { Map } from 'components/Map/Map';
 import { useState } from 'react';
 import { useMask } from '@react-input/mask';
+import { addToOrder } from '../../firebase/services';
 
 const KEY_API = 'AIzaSyCrs9IgGlZ0hl2-4pueyi1ESmZ7nR5YSq4';
 
@@ -31,7 +32,7 @@ export const ShopCartForm = ({ shopCart, setShopCart }) => {
     },
     validationSchema: Schema,
     onSubmit: (value, { resetForm }) => {
-      console.log(value, value.order = order)
+      addToOrder(value, value.order = order);
       resetForm();
       setShopCart([]);
       Notiflix.Notify.success(`${value.name}, thank you for your order`);
